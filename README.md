@@ -71,31 +71,33 @@ Before running the application ensure your system:
 1. Has minimum JRE 7
 2. Not using port 8080
 
-Building ebads-core:
-1. Build gradle wrapper for ebads-core
+### Building ebads-core:
+
+Build gradle wrapper for ebads-core
 ```
 cd ebads-core
 gradle wrapper
 ```
-2. Build ebads-core
+Build ebads-core
 ```
 cd ebads-core
 ./gradlew build
 ```
 
-Building ebads-ui:
-1. Build gradle wrapper for ebads-ui
+### Building ebads-ui:
+
+Build gradle wrapper for ebads-ui
 ```
 cd ebads-ui
 gradle wrapper
 ```
-2. Build ebads-core
+Build ebads-core
 ```
 cd ebads-ui
 ./gradlew build
 ```
 
-To run the application in Linux:
+### To run the application in Linux:
 ```
 cd ebads-ui
 ./gradlew bootRun
