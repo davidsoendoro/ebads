@@ -65,3 +65,40 @@ Relative entropy formula is as follows:
 * Extends the solution for other attacks by extending mapper and reader.
 * Implements other method such as Neural Network, Shared Nearest Neighbor, and Kernel Method.
 * Perfecting the use of multiple features.
+
+## Building the application
+Before running the application ensure your system:
+1. Has minimum JRE 7
+2. Not using port 8080
+
+Building ebads-core:
+1. Build gradle wrapper for ebads-core
+```
+cd ebads-core
+gradle wrapper
+```
+2. Build ebads-core
+```
+cd ebads-core
+./gradlew build
+```
+
+Building ebads-ui:
+1. Build gradle wrapper for ebads-ui
+```
+cd ebads-ui
+gradle wrapper
+```
+2. Build ebads-core
+```
+cd ebads-ui
+./gradlew build
+```
+
+To run the application in Linux:
+```
+cd ebads-ui
+./gradlew bootRun
+```
+
+Use similar gradle application to run the application in Windows or Mac (untested)
