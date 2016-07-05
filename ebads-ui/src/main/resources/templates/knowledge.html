@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>
+            EBADS
+            <small>Entropy Based Anomaly Detection System</small>
+        </h1>
+        <p>EBADS utilizes information theory about entropy to detect anomaly within a network communication</p>
+    </div>
+
+    <p>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-primary" href="/knowledge/loaddb">Load Database</a>
+                <a class="btn btn-info" href="/knowledge/savedb">Save Database</a>
+                <a class="btn btn-warning" href="/knowledge/import">Import Knowledge</a>
+            </div>
+        </div>
+    </p>
+
+    <form class="form-inline">
+        <div class="row">
+            <div class="col-md-12 table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Content</th>
+                        <th>Label</th>
+                    </tr>
+                    <tr th:each="knowledge : ${knowledges}">
+                        <td th:text="${knowledge}">1</td>
+                        <td></td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Label"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-success pull-right">Apply Changes</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
